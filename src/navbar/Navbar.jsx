@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const navLinks = ["Destination", "Hotels", "Flights", "Bookings"];
@@ -10,11 +11,11 @@ export default function Navbar() {
     document.documentElement.classList.toggle("dark");
     setIsDark(!isDark);
   };
-
+  
   return (
     //logo
-    <div class="h-screen dark:bg-slate-700">
-      <nav class="relative w-full bg-transparent font-sans pl-5 sm:px-12 pt-6 ">
+    <div class=" dark:bg-slate-700">
+      <nav class="z-50 absolute w-full bg-transparent font-sans pl-5 sm:px-12 pt-6 ">
         <div className="flex items-center justify-between sm:justify-evenly">
           <div className="font-bold text-4xl sm:text-3xl  text-[#181E4B] tracking-wide cursor-pointer dark:text-white underline dark:decoration-[#e5735c] decoration-[#181E4B]">
             Jad<span className="text-[#DF6951]">oo</span>

@@ -33,7 +33,7 @@ export default function Forms() {
   };
 
   return (
-    <div className="min-h-screen w-full bg-pink-100 dark:bg-slate-900 flex flex-col items-center justify-center p-6 gap-6">
+    <div className=" min-h-screen w-full bg-pink-100 dark:bg-slate-900 flex flex-col items-center justify-center p-6 gap-6">
       <form className="w-full max-w-2xl h-auto bg-white/90 dark:bg-pink-100 border border-pink-100 dark:border-pink-300 p-8 rounded-2xl shadow-2xl shadow-gray-900 dark:shadow-white grid grid-cols-1 sm:grid-cols-2 gap-4 items-end dark:shadow-2xl  ">
         <h1 className="sm:col-span-2 text-3xl font-bold text-slate-800 dark:text-slate-900 flex justify-center mb-6 underline">
           STUDENT REGISTRATION FORM
