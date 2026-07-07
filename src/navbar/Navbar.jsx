@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const navLinks = ["Destination", "Hotels", "Flights", "Bookings"];
@@ -11,11 +10,23 @@ export default function Navbar() {
     document.documentElement.classList.toggle("dark");
     setIsDark(!isDark);
   };
-  
+  const handleScroll = (sectionId) => {
+    const section = document.getElementById(sectionId);
+
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+
+    setIsOpen(false);
+  };
+
   return (
     //logo
-    <div class=" dark:bg-slate-700">
-      <nav class="z-50 absolute w-full bg-transparent font-sans pl-5 sm:px-12 pt-6 ">
+    <div className=" dark:bg-slate-700">
+      <nav className="z-50 absolute w-full bg-transparent font-sans pl-5 sm:px-12 pt-6 ">
         <div className="flex items-center justify-between sm:justify-evenly">
           <div className="font-bold text-4xl sm:text-3xl  text-[#181E4B] tracking-wide cursor-pointer dark:text-white underline dark:decoration-[#e5735c] decoration-[#181E4B]">
             Jad<span className="text-[#DF6951]">oo</span>
@@ -25,16 +36,17 @@ export default function Navbar() {
             <div className="sm:mt-4 flex flex-col sm:gap-3 text-0.5rem sm:text-sm sm:font-medium text-[#212832]  ">
               <Link
                 to="/Login"
-                className="w-full rounded-lg px-4 sm:py-2 text-left hover:text-[#DF6951] transition-colors duration-200 sm:hidden flex items-center justify-end underline dark:text-white"
+                className="w-full rounded-lg px-4 sm:py-2 text-left hover:text-[#DF6951] transition-colors duration-200 sm:hidden flex items-center justify-end underline dark:text-white "
               >
                 Login
               </Link>
-              <button
+              <Link
+                to="/Sign"
                 className="w-full rounded-lg sm:border-2 sm:border-[#212832] bg-transparent px-4 sm:py-2 text-left transition-all duration-200 hover:bg-[#212832] hover:text-white sm:hidden underline
             dark:text-white"
               >
                 Sign up
-              </button>
+              </Link>
             </div>
 
             {/* For responsive button*/}
@@ -46,9 +58,9 @@ export default function Navbar() {
             >
               <span className="sr-only">Open menu</span>
               <svg
-                className="h-6 w-6 text-[#DF6951]"
+                className="h-6 w-6 text-[#DF6951] "
                 viewBox="0 0 24 24" //height width
-                stroke="#DF6951"
+                stroke="#181E4B"
               >
                 {isOpen ? (
                   // close
@@ -83,12 +95,13 @@ export default function Navbar() {
             <ul className="flex items-center gap-8 text-[#212832] font-medium text-sm dark:text-white">
               {navLinks.map((item) => (
                 <li key={item}>
-                  <a
-                    href={`#${item.toLowerCase()}`}
-                    className="hover:text-[#DF6951] transition-colors duration-200"
+                  <button
+                    type="button"
+                    onClick={() => handleScroll(item.toLowerCase())}
+                    className="hover:text-[#DF6951] transition-colors duration-200 cursor-pointer"
                   >
                     {item}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
@@ -96,9 +109,12 @@ export default function Navbar() {
               <button className="hover:text-[#DF6951] transition-colors dark:text-white">
                 <Link to="/Login">Login</Link>
               </button>
-              <button class="rounded-md border-2 border-[#212832] bg-transparent px-4 py-2 text-sm font-medium transition-all duration-200 hover:bg-[#212832] hover:text-white dark:text-white dark:border-white">
+              <Link
+                to="/Sign"
+                className="rounded-md border-2 border-[#212832] bg-transparent px-4 py-2 text-sm font-medium transition-all duration-200 hover:bg-[#212832] hover:text-white dark:text-white dark:border-white flex items-center"
+              >
                 Sign up
-              </button>
+              </Link>
             </div>
             <button
               type="button"
@@ -116,13 +132,13 @@ export default function Navbar() {
             <ul className="flex flex-col gap-4 text-[#212832] font-medium text-sm">
               {navLinks.map((item) => (
                 <li key={item}>
-                  <a
-                    href={`#${item.toLowerCase()}`}
-                    className="block rounded-lg px-3 py-2 transition-colors duration-200 hover:bg-[#F8F9FB] hover:text-[#DF6951]"
-                    onClick={() => setIsOpen(false)}
+                  <button
+                    type="button"
+                    onClick={() => handleScroll(item.toLowerCase())}
+                    className="block w-full text-left rounded-lg px-3 py-2 transition-colors duration-200 hover:bg-[#F8F9FB] hover:text-[#DF6951]"
                   >
                     {item}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>

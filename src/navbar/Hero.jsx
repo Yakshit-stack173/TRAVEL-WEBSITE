@@ -23,13 +23,22 @@ export default function Hero() {
           the.
         </h1>
         <div class="z-50">
-          <button class="bg-amber-400 pl-6 pr-6 pt-2 pb-2 text-white rounded-2xl">Find Out More</button>
-          <button class="bg-amber-400 pl-6 pr-6 pt-2 pb-2 text-white ml-5 rounded-2xl"> <span className="bg-amber-400">
-            ▶️
-          </span>Play Demo</button>
+          <button class="bg-amber-400 pl-4 pr-6 pt-2 pb-2 text-white rounded-2xl
+          transition hover:scale-105 duration-300">
+            Find Out More
+          </button>
+
+
+          <Link to="/Video" className="bg-amber-400 pl-4 pr-6 pt-2 pb-2 text-white ml-5 rounded-2xl inline-block transition hover:scale-105 duration-300">
+            {" "}
+            <span className="bg-amber-400">▶️</span>Play Demo
+          </Link>
         </div>
 
-        <img src={planeImg} class=" sm:hidden absolute opacity-50 dark:opacity-70" />
+        <img
+          src={planeImg}
+          class=" sm:hidden absolute opacity-50 dark:opacity-70"
+        />
         <img
           src={travellerImg}
           class="sm:hidden absolute h-80 mr-3 opacity-50 dark:opacity-70 "
