@@ -1,0 +1,54 @@
+{
+  "hotels": [
+    {
+      "id": 1,
+      "name": "Grand Palace Hotel",
+      "city": "Paris",
+      "country": "France",
+      "rating": 4.8,
+      "price": 280,
+      "image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80",
+      "description": "Luxury rooms in the heart of Paris with city views and premium service."
+    },
+    {
+      "id": 2,
+      "name": "Oceanview Resort",
+      "city": "Sydney",
+      "country": "Australia",
+      "rating": 4.6,
+      "price": 320,
+      "image": "https://images.pexels.com/photos/1134176/pexels-photo-1134176.jpeg?cs=srgb&dl=dug-out-pool-hotel-pool-1134176.jpg&fm=jpg",
+      "description": "Beachfront resort with ocean views, spa facilities, and all-day dining."
+    },
+    {
+      "id": 3,
+      "name": "Mountview Lodge",
+      "city": "Zermatt",
+      "country": "Switzerland",
+      "rating": 4.7,
+      "price": 260,
+      "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
+      "description": "Cozy alpine lodge near ski slopes with panoramic mountain scenery."
+    },
+    {
+      "id": 4,
+      "name": "City Lights Hotel",
+      "city": "New York",
+      "country": "USA",
+      "rating": 4.5,
+      "price": 240,
+      "image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80",
+      "description": "Modern hotel near Times Square with rooftop lounge and fast Wi-Fi."
+    },
+    {
+      "id": 5,
+      "name": "Desert Oasis Retreat",
+      "city": "Dubai",
+      "country": "UAE",
+      "rating": 4.9,
+      "price": 400,
+      "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80",
+      "description": "Opulent desert resort with private villas, spa, and Arabian dining."
+    }
+  ]
+}

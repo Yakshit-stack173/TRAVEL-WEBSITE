@@ -6,7 +6,7 @@ import planeImg from "../images/plane.png";
 export default function Hero() {
   return (
     <div class="bg-white dark:bg-slate-700 h-110 mt-0.2 flex justify-between items-center">
-      <div class=" w-110 h-60 mt-3 ml-4 mr-3 flex flex-col sm:ml-25">
+      <div class=" w-110 h-60 mt-3 ml-8 mr-3 flex flex-col sm:ml-25">
         <h2 class="text-[#DF6951] font-bold text-[20px] sm:text-2xl sm:mb-3 z-50">
           Best Destinations around the world
         </h2>
@@ -18,9 +18,7 @@ export default function Hero() {
           a new and full life
         </h1>
         <h1 class="text-[#5E6282] dark:text-white mb-3 z-50">
-          Built Wicket longer admire do barton vanity itself do in it. Preferred
-          to sportsmen it engrossed listening. Park gate sell they west hard for
-          the.
+          Explore the world your way. Discover beautifully curated destinations, hidden getaways, and seamless travel bookings crafted for unforgettable adventures.
         </h1>
         <div class="z-50">
           <button class="bg-amber-400 pl-4 pr-6 pt-2 pb-2 text-white rounded-2xl
@@ -29,7 +27,7 @@ export default function Hero() {
           </button>
 
 
-          <Link to="/Video" className="bg-amber-400 pl-4 pr-6 pt-2 pb-2 text-white ml-5 rounded-2xl inline-block transition hover:scale-105 duration-300">
+          <Link to="/Video" className="bg-amber-400 pl-4 pr-6 pt-2 pb-2 text-white sm:ml-5 rounded-2xl inline-block transition hover:scale-105 duration-300 ml-1">
             {" "}
             <span className="bg-amber-400">▶️</span>Play Demo
           </Link>

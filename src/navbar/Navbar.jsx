@@ -1,16 +1,23 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const navLinks = ["Destination", "Hotels", "Flights", "Bookings"];
   const [isDark, setIsDark] = useState(false);
+  const navigate = useNavigate();
 
   const toggleDarkMode = () => {
     document.documentElement.classList.toggle("dark");
     setIsDark(!isDark);
   };
   const handleScroll = (sectionId) => {
+    if (sectionId === "hotels") {
+      navigate("/Book");
+      setIsOpen(false);
+      return;
+    }
+
     const section = document.getElementById(sectionId);
 
     if (section) {
@@ -119,7 +126,7 @@ export default function Navbar() {
             <button
               type="button"
               onClick={toggleDarkMode}
-              className=" dark:bg-[#e07964] rounded-3xl px-6 py-2 bg-[#212832] border-2 border-amber-600 dark:border-white "
+              className="dark:bg-[#e07964] rounded-3xl px-6 py-2 bg-[#212832] border-2 border-amber-600 dark:border-white "
             >
               {isDark ? "☀️" : "🌙"}
             </button>

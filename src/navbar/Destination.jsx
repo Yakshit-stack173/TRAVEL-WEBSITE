@@ -54,7 +54,7 @@ export default function Main() {
               <img
                 src={item.img}
                 alt={item.place}
-                className="w-full h-58 object-cover rounded-t-3xl"
+                className="w-full h-45 object-cover rounded-t-3xl"
               />
 
               <div className="p-4">
