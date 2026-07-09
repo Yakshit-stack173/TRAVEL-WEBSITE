@@ -18,6 +18,13 @@ export default function Navbar() {
       return;
     }
 
+    // Navigate to the Flight page instead of scrolling when 'flights' is clicked
+    if (sectionId === "flights") {
+      navigate("/Flight");
+      setIsOpen(false);
+      return;
+    }
+
     const section = document.getElementById(sectionId);
 
     if (section) {

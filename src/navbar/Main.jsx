@@ -7,7 +7,7 @@ import Air from "../images/plane.png";
 export default function Main() {
   return (
     <section
-      id="flights"
+
       className="flex justify-center items-center flex-col sm:h-1/4 sm:mt-30 dark:text-white mt-20 mb-15 "
     >
       <h3 className="font-bold text-slate-600 text-2xl dark:text-amber-700">

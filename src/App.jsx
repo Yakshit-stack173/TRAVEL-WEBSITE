@@ -9,6 +9,7 @@ import Destination from "./navbar/Destination";
 import Video from "./navbar/video";
 import Sign from "./navbar/Sign";
 import Book from "./navbar/Book";
+import Flight from "./navbar/Flight";
 import Sus from "./navbar/Sus";
 import Footer from "./navbar/Footer";
 import RootLayout from "./Layout/RootLayout";
@@ -40,6 +41,7 @@ export default function App() {
           <Route path="Video" element={<Video />} />
           <Route path="Sign" element={<Sign />} />
           <Route path="Book" element={<Book />} />
+          <Route path="Flight" element={<Flight />} />
         </Route>
       </Routes>
     </BrowserRouter>
